@@ -136,4 +136,4 @@ The container mounts `data/` volumes for persistence and caches HuggingFace mode
 
 ## License
 
-MIT
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
