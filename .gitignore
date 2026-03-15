@@ -1,0 +1,68 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables (contains API keys)
+.env
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data directories (large files — keep empty dirs via .gitkeep)
+data/raw/*
+data/processed/*
+data/indices/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/indices/.gitkeep
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+poetry.lock
+
+# Docker
+docker-compose.override.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# HuggingFace model cache (if downloaded locally)
+models_cache/
+
+# Logs
+*.log
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Evaluation
+src/evaluation/test_queries.json
+evaluation_results/
+*_eval_results.json
+*_eval_results.csv

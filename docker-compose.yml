@@ -1,0 +1,17 @@
+services:
+  menoguide:
+    build: .
+    container_name: menoguide
+    ports:
+      - "8501:8501"
+    volumes:
+      # Persist data across container restarts
+      - ./data/raw:/app/data/raw
+      - ./data/processed:/app/data/processed
+      - ./data/indices:/app/data/indices
+      # HuggingFace model cache (avoids re-downloading)
+      - hf_cache:/root/.cache/huggingface
+    restart: unless-stopped
+
+volumes:
+  hf_cache:
